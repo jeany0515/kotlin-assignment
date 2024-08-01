@@ -1,5 +1,6 @@
 package com.example.kotlinassignment.config
 
+import com.example.kotlinassignment.service.InventoryService
 import com.example.kotlinassignment.service.ProductService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -28,5 +29,10 @@ class RetrofitConfig {
     @Bean
     fun productService(retrofit: Retrofit): ProductService {
         return retrofit.create(ProductService::class.java)
+    }
+
+    @Bean
+    fun inventoryService(retrofit: Retrofit): InventoryService {
+        return retrofit.create(InventoryService::class.java)
     }
 }

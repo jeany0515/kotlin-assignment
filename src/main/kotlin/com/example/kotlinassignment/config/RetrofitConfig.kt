@@ -1,7 +1,7 @@
 package com.example.kotlinassignment.config
 
-import com.example.kotlinassignment.service.InventoryService
-import com.example.kotlinassignment.service.ProductService
+import com.example.kotlinassignment.api.InventoryApi
+import com.example.kotlinassignment.api.ProductApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.springframework.context.annotation.Bean
@@ -27,12 +27,12 @@ class RetrofitConfig {
     }
 
     @Bean
-    fun productService(retrofit: Retrofit): ProductService {
-        return retrofit.create(ProductService::class.java)
+    fun productClient(retrofit: Retrofit): ProductApi {
+        return retrofit.create(ProductApi::class.java)
     }
 
     @Bean
-    fun inventoryService(retrofit: Retrofit): InventoryService {
-        return retrofit.create(InventoryService::class.java)
+    fun inventoryClient(retrofit: Retrofit): InventoryApi {
+        return retrofit.create(InventoryApi::class.java)
     }
 }

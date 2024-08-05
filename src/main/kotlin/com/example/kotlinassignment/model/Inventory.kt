@@ -1,8 +1,11 @@
 package com.example.kotlinassignment.model
 
-data class Inventory(
-    val id: String,
-    val SKU: String,
-    val zone: String,
-    val quantity: Int
+import com.fasterxml.jackson.annotation.JsonCreator
+import com.fasterxml.jackson.annotation.JsonProperty
+
+data class Inventory @JsonCreator constructor(
+    @JsonProperty("id") val id: String,
+    @JsonProperty("SKU") val SKU: String,
+    @JsonProperty("zone") val zone: String,
+    @JsonProperty("quantity") val quantity: Int
 )

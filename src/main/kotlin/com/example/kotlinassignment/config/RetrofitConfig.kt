@@ -2,6 +2,7 @@ package com.example.kotlinassignment.config
 
 import com.example.kotlinassignment.api.InventoryApi
 import com.example.kotlinassignment.api.ProductApi
+import com.fasterxml.jackson.databind.ObjectMapper
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.springframework.context.annotation.Bean

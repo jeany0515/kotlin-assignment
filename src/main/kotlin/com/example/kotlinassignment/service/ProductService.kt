@@ -51,7 +51,6 @@ class ProductService(
                 "HIGH_DEMAND" -> calculateHighDemandPrice(product.price, totalQuantity)
                 else -> product.price
             }
-            println(product)
 
             ProductInfo(
                 id = product.id,
